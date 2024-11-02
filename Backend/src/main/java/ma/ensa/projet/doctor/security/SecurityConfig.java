@@ -38,12 +38,12 @@ public class SecurityConfig {
 
                         .requestMatchers("/api/auth/**").permitAll()
                         .requestMatchers("/api/password").permitAll()
+                        .requestMatchers("/api/images/**").permitAll()
 
                         .requestMatchers(HttpMethod.GET, "/api/doctors/**").hasRole("PATIENT")
                         .requestMatchers(HttpMethod.PUT, "/api/doctors/**").hasRole("DOCTOR")
                         .requestMatchers(HttpMethod.PUT, "/api/patient/**").hasRole("PATIENT")
 
-                        .requestMatchers(HttpMethod.GET, "/api/images").hasAnyRole("PATIENT", "DOCTOR")
                         .requestMatchers(HttpMethod.GET, "/api/rendv/**").hasAnyRole("PATIENT", "DOCTOR")
 
                         .anyRequest().authenticated());
