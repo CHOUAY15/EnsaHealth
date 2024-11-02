@@ -24,7 +24,8 @@ This solution is illustrated through the creation of a mobile application for ap
 
 ## 🏗️ Architecture
 
-![Application Architecture](https://github.com/user-attachments/assets/d9198287-b0ff-45b7-843b-5a37a9005b68)
+![WhatsApp Image 2024-11-02 à 11 00 40_fbc5e0a5](https://github.com/user-attachments/assets/c2b0d9f4-c455-49fe-9076-0e5ddc139e1e)
+
 
 ## 🏗️ Architecture Details
 
