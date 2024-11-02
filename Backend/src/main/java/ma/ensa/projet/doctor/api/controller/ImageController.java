@@ -14,7 +14,7 @@ import java.nio.file.Files;
 @RequestMapping("/api/images")
 public class ImageController {
 
-    private final String imageDirectory = "src/main/resources/static/images/";
+    private final String imageDirectory = "Backend/src/main/resources/static/images/";
 
     @GetMapping("/{imageName}")
     public ResponseEntity<Resource> getImage(@PathVariable String imageName) {
