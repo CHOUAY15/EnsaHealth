@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation_doc"
+    app:startDestination="@+id/navigation_home_doc">
+
+    <fragment
+        android:id="@+id/navigation_home_doc"
+        android:name="ma.ensa.projet.ui.doctor.HomeDocFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home_doc" />
+
+    <fragment
+        android:id="@+id/navigation_appoin_doc"
+        android:name="ma.ensa.projet.ui.doctor.ApDocFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_appoin_doc" />
+
+    <fragment
+        android:id="@+id/navigation_profil_doc"
+        android:name="ma.ensa.projet.ui.doctor.ProfilDocFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_profil_doc" />
+    <fragment
+        android:id="@+id/navigation_dashboard_doc"
+        android:name="ma.ensa.projet.ui.doctor.DashboardFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_dashboard" />
+</navigation>

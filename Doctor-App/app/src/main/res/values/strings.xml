@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">EnsaHealth</string>
+    <string name="title_activity_main_use">MainUseActivity</string>
+    <string name="title_home">Accueil</string>
+    <string name="title_dashboard">Rendez-vous</string>
+    <string name="title_notifications">Profil</string>
+    <string name="title_dashboardDoc">Calendrier</string>
+    <string name="title_activity_main_doc">MainDocActivity</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

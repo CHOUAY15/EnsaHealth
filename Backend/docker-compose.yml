@@ -1,0 +1,54 @@
+version: "3.8"
+
+services:
+  mysql-db:
+    image: mysql:8.0
+    container_name: mysql-doctor
+    environment:
+      - MYSQL_DATABASE=database
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    networks:
+      - app-network
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  backend:
+    image: spring-boot-app 
+    container_name: spring-boot-doctor
+    depends_on:
+      - mysql-db
+    ports:
+      - "8081:4000" 
+    networks:
+      - app-network
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/doctor_db
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin-doctor
+    depends_on:
+      - mysql-db
+    ports:
+      - "8082:80"
+    networks:
+      - app-network
+    environment:
+      PMA_HOST: mysql-db
+      PMA_PORT: 3306
+
+volumes:
+  mysql_data:
+
+networks:
+  app-network:
+    driver: bridge

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:gravity="center_horizontal">
+
+    <!-- Icon for the speciality -->
+    <ImageView
+        android:id="@+id/speciality_icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/cardiology"
+        android:contentDescription="Speciality Icon"
+        android:tint="@color/purple" />
+
+    <!-- Speciality name -->
+    <TextView
+        android:id="@+id/speciality_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cardiology"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"
+        android:gravity="center" />
+
+</LinearLayout>
